@@ -1,4 +1,5 @@
 import { moves } from "./data.js";
+import PokeMoveCard from "./PokeMoveCard";
 
 const Moves = () => {
     return (
@@ -6,9 +7,7 @@ const Moves = () => {
             <h1>Moves</h1>
             <ul>
                 {moves.map((item, i) => (
-                    <li key={i}>
-                        {item.id}. {item.move}
-                    </li>
+                    <PokeMoveCard key={item.id} {...item} />
                 ))}
             </ul>
         </>
